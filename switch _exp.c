@@ -1,19 +1,20 @@
 #include<stdio.h>
 
-int main()
-{
-int opt=3;
-switch(opt)
-{
-case 1:
-printf("January\n:");
-break;
-case 2:
-printf("february\n:");
-break;
-default :
-printf("december:");
-break;
+
+char * getMonthName(int num) {
+  switch(num) {
+    case 1:
+    return "January";
+    case 2:
+    return "february";
+    default :
+    return "december";
+  }
 }
-return 0;
+
+int main() {
+  int opt=1;
+  char* name = getMonthName(opt);
+  printf("%s", name);
+  return 0;
 }
